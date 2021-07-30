@@ -15,7 +15,7 @@ function same(arr1, arr2) {
     return false;
   }
   for (let i = 0; i < arr1.length; i++) {
-    let correctIndex = arr2.indexOf(arr1[i] ** 2) 
+    let correctIndex = arr2.indexOf(arr1[i] ** 2) // indexOf() is a loop
     if (correctIndex === -1) {
       console.log("false")
       return false;
