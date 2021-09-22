@@ -14,13 +14,14 @@ const sumZero = (array) => {
   let left = 0;
   let right = array.length - 1;
 
-  while (right != 0) {
-    if (array[right] + array[left] != 0) {
+  while (right != left) {
+    if (array[right] + array[left] > 0) {
       right -= 1;
+    } else if (array[right] + array[left] < 0) {
+      left += 1;
     } else if (array[right] + array[left] === 0) {
-      return console.log(array[left], array[right]);
+      return console.log(array[right], array[left]);
     }
-    return console.log("false");
   }
 };
-sumZero([-3, 1, 2, 3, 3]); //
+sumZero([-4, -2, 1, 2, 3, 3]); //
