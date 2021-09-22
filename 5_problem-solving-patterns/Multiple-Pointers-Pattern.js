@@ -15,12 +15,12 @@ const sumZero = (array) => {
   let right = array.length - 1;
 
   while (right != left) {
-    if (array[right] + array[left] > 0) {
-      right -= 1;
-    } else if (array[right] + array[left] < 0) {
-      left += 1;
-    } else if (array[right] + array[left] === 0) {
+    if (array[right] + array[left] === 0) {
       return console.log(array[right], array[left]);
+    } else if (array[right] + array[left] > 0) {
+      right--;
+    } else if (array[right] + array[left] < 0) {
+      left++;
     }
   }
 };
